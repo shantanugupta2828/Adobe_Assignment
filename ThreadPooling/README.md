@@ -1,5 +1,5 @@
 ## Problem Statement
-	A multi-threaded (e.g. file-based) web server with thread-pooling 	implemented in Java.
+	A multi-threaded (e.g. file-based) web server with thread-pooling implemented in Java.
 
 ## Solution
 	It is a simple demonstration for Thread pooling in Java through a server connection
@@ -12,6 +12,4 @@
 	
 
 ## References
-	http://tutorials.jenkov.com/java-multithreaded-servers/thread-pooled-server.html
-
-https://www.youtube.com/watch?v=_s4456wKMlw
+	[http://tutorials.jenkov.com/java-multithreaded-servers/thread-pooled-server.html][https://www.youtube.com/watch?v=_s4456wKMlw]
