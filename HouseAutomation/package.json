@@ -1,0 +1,22 @@
+{
+  "name": "Home",
+  "version": "0.0.1",
+  "description": "Home automation",
+  "main": "index.html",
+  "author": "",
+  "devDependencies": {
+    "archiver": "^0.12.0",
+    "bower-art-resolver": "^2.0.5",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-war": "^0.4.9",
+    "phantomjs": "^1.9.18"
+  },
+  "dependencies": {
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "js-cookie": "^2.2.0"
+  }
+}

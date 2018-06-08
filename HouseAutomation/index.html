@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="home_automation">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Automation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="homeService.js"></script>
+	<script>
+	var room1_temperature = localStorage.getItem('room1_temp');
+	
+	var room2_temperature = localStorage.getItem('room2_temp');
+	</script>
+    <style type="text/css">
+
+        .room1_size{
+            height: 250px;
+            width: 400px;
+            border: 1px solid;
+            background-color: yellow;
+        }
+
+        .room2_size{
+            display:inline-block;
+            height: 250px;
+            width: 400px;
+            border: 1px solid;
+            background-color: white;
+        }
+
+    </style>
+
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+
+<body ng-controller="homeController">
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Home<br>Automation</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+     
+    
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<!-- Header -->
+  <div class="w3-container" style="margin-top:50px" "margin-left:80px" id="showcase">
+  
+    <h1 class="w3-jumbo" style="padding-left: 80px"><center><b>Interior Design</b></center></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+	
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+
+  
+  
+  
+
+
+
+<!-- This div can be imagined as a room-->
+<center>
+<h3><b><u> Room 1 </u></b></h3>
+<div class="room1_size">
+    <span> 
+	<button id="room_1">Toggle Lights</button> </span><br/>
+
+    <span> <button id="room1Decrease"> - </button> {{roomTemp.room_1.temperature}} &#x2103; <button id="room1Increase"> + </button> </span>
+
+</div>
+
+<br/>
+<button id="curtain"> Switch Curtain </button><br/>
+
+<!-- A thin SVG line segment can be imagined as a curtain -->
+<svg height="55" width="500" >
+    <line x1="0" y1="50" x2="500" y2="50" style="stroke:rgb(255,0,0);stroke-width:2" ng-show="isCurtain"/>
+</svg>
+<br/><br/><br/>
+
+<!-- This div can be imagined as another room-->
+<h3><b><u> Room 2 </u></b></h3>
+<div class="room2_size" style="margin-bottom:80px" ng-show="isCurtain">
+    <span> <button id="room_2">Toggle Lights</button> </span><br/>
+    <span> <button id="room2Decrease"> - </button> {{roomTemp.room_2.temperature}} &#x2103; <button id="room2Increase"> + </button> </span>
+</div>
+</center>
+
+
+</body>
+</html>
