@@ -12,7 +12,8 @@ A simple AngularJS application has been developed based on the requirements. jQu
 
 ## Technology requirements
 
-You should install Node, Grunt and Bower globally before proceeding, it'll make the process much easier. You'll only need these prequisites if you're planning on doing development, otherwise everything should run directly out of the src/main/www folder anyway.
+You should install Node for npm, Grunt globally before proceeding, it'll make the process much easier. 
+(You'll only need these prequisites if you're planning on doing development)
 
 1. [npm] (https://nodejs.org/en/)
 2. [Grunt] (http://gruntjs.com/getting-started)
@@ -21,24 +22,24 @@ You should install Node, Grunt and Bower globally before proceeding, it'll make 
 Once these 3 are installed simply do 
 
 ```javascript
+
+This command will fetch all the dependencies from package.json 
 npm install
 ```
-This will fetch all the dependies from package.json
 
 ```javascript
+This command will serve the application using node.js running on 3000 port
 grunt serve
 ```
-This will serve the application using node.js running on 5050 port
 
 ```javascript
+This command will create a home.war file inside /dist folder 
 grunt
 ```
-This will create a home.war file inside /dist folder
 
 ## Attachments
 
 1. If you want to run the application on a web-server, simply deploy the "home.war" file on a web-server (e.g: tomcat)
-2. The whole project is also attached as a .rar file in addition to files separately
 
 ## References
 
